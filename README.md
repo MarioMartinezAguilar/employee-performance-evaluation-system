@@ -94,80 +94,114 @@ El sistema fue desarrollado siguiendo una arquitectura cliente-servidor, donde e
 
 ### Inicio de sesión
 **Vista previa de el inicio de sesión de la parte del dashboard administrativo**
+
 ![Login](capturas/login.png)
 
 ### Registro de empleados
 **Formulario de registro para los empleados que participan en la evaluación**
+
 ![Registro de empleados](capturas/formulario.png)
 ![Registro de empleados](capturas/formulario2.png)
 
 ### Evaluación de desempeño laboral
 **Encuesta para evaluar el desempeño laboral**
+
 ![Encuesta](capturas/encuesta.png)
 ![Encuesta](capturas/encuesta2.png)
 ![Encuesta](capturas/encuesta3.png)
 
 ### Página de agradecimiento
 **Página de agradecimiento cuando el usuario termina de contestar la encuesta utilizando el efecto glass**
+
 ![Página de agradecimiento](capturas/gracias.png)
 
 ### Interactividad con el usuario
 **Mejorando la experiencia del usuario utilizando spinner los botones de la encuesta**
+
 ![Spinner](capturas/spinner.png)
+
 **Experiencia de usuario con una barra de progreso**
+
 ![Barra-Progreso](capturas/barra-progreso.png)
+
 **Diseño agradable de la encuesta para el usuario**
+
 ![encuesta](capturas/radio.png)
+
 **Spinner en la encuesta cuando se están mandando las respuestas al backend**
+
 ![encuesta](capturas/radio-spinner.png)
+
 **Efecto de cristal esmerilado(glassmorphism) cuando el empleado desea cancelar se aplica una ventana modal con este efecto**
+
 ![cristal-esmerilado](capturas/glassmorphism.png)
+
 **Manejo de notificaciones cuando el usuario inicia sesión correctamente, el empleado se registra o cuando se cierra sesión correctamente**
+
 ![exitoso](capturas/notif-session-exitoso.png)
 ![empleado-registrado](capturas/notif-empleado.png)
 ![empleado-registrado](capturas/notif-session.png)
 
 ### Dashboard administrativo y análisis
 **El dashboard administrativo cuenta con tres secciones principales:**
+
 **sección 1 se encuentra el dashboard principal donde contiene toda la información de la encuesta**
+
 ![Dashboard](capturas/dashboard.png)
+
 **sección 2 es donde se encuentra las estadísticas de los empleados por sexo**
+
 ![Dashboard](capturas/dashboard2.png)
+
 **sección 3 hace referencia a los reportes en formato PDF o Excel**
+
 ![Dashboard](capturas/dashboard3.png)
 
 ### API REST - Empleados
 **Aquí se muestra el endpoint de la API donde están los empleados registrados**
+
 ![API-empleados](capturas/rest-empleados.png)
 
 ### Preguntas de la encuesta que se encuentran en el backend para realizar la evaluación
+
 ![preguntas](capturas/preguntas.png)
 
 ### API REST - Estadísticas
 **Aquí se muestran los resultados de toda la encuesta en la parte del backend**
+
 ![result](capturas/results.png)
 
 ### Autenticación JWT
 **Vista previa de nuestro Json Web Token generado en Django REST Framework**
+
 ![token](capturas/token.png)
 
 ### Reportes PDF
 **Reportes generados tanto como en el backend como en el frontend**
+
 ![reportes](capturas/pdf.png)
 ![reportes](capturas/pdf2.png)
+
 **Gráficos en formato PDF de los resultados de la evaluación de desempeño laboral**
+
 ![reportes](capturas/pdf3.png)
+
 **Resumen de los resultados en el PDF**
+
 ![reportes](capturas/pdf-resumen.png)
 
 ### Exportación de datos a Excel
 **Registro de empleados que participaron en la evaluación en formato Excel**
+
 ![Excel](capturas/excel.png)
 
 ### Base de Datos
 **Se puede ver la persistencia de datos en la base de datos SQLite con la tabla de empleados registrado**
+
 ![sqlite](capturas/empleados-sqlite.png)
+
 **Por otro lado se muestra en la base de datos como esta estructurada las opciones de respuesta de cada pregunta de la evaluación**
+
 ![sqlite](capturas/opciones.png)
 
 ### Documentación de la API (Swagger)
@@ -196,16 +230,17 @@ La API REST se encuentra documentada mediante Swagger/OpenAPI utilizando **drf-s
 **Nota:** Las vistas auxiliares utilizadas por el dashboard administrativo para estadísticas, generación de reportes y exportación de archivos se implementaron mediante vistas tradicionales de Django y no forman parte de la documentación OpenAPI.
 
 Documentación interactiva generada automáticamente mediante drf-spectacular y OpenAPI 3.0.
+
 ![Swagger](capturas/swagger.png)
 
 ## Instalación para hacer uso de la aplicación
 
 ### Clonar el repositorio
 ```bash
-    git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
+    git clone https://github.com/MarioMartinezAguilar/employee-performance-evaluation-system
 ```
 ```bash
-    cd TU-REPOSITORIO
+    cd employee-performance-evaluation-system
 ```
 ### Configuración del Backend
 Crear y activar un entorno virtual:
