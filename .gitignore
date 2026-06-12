@@ -1,0 +1,53 @@
+# ==========================
+# Django
+# ==========================
+
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Base de datos
+db.sqlite3
+
+# Variables de entorno
+.env
+
+# ==========================
+# React / Vite
+# ==========================
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencias
+front-end_react/node_modules/
+
+# Build
+front-end_react/dist/
+front-end_react/dist-ssr/
+
+*.local
+
+# ==========================
+# Editores
+# ==========================
+
+.vscode/*
+!.vscode/extensions.json
+
+.idea
+.DS_Store
+
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
