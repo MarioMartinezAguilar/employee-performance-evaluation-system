@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { API_URL } from './config';
 
 const employeeStatsApi = axios.create({
-    baseURL: 'http://127.0.0.1:8000/api/v1/employee-gender/'
+    baseURL: `${API_URL}/employee-gender/`
 })
 
 export const getEmployeeGenderStats = () => {

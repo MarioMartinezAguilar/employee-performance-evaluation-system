@@ -1,7 +1,8 @@
 import axios  from 'axios';
+import { API_URL } from './config';
 
  const empleadoApi = axios.create({
-    baseURL:'http://localhost:8000/api/v1/employees/'
+    baseURL:`${API_URL}/employees/`
 });
 
 export const registrarEmpleado = (empleado) => empleadoApi.post('/', empleado);  

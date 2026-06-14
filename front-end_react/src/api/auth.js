@@ -1,8 +1,9 @@
 import axios from 'axios';
+import { API_URL } from './config';
 
 export const loginUser = (userData) =>{
    return axios.post(
-        'http://127.0.0.1:8000/api/v1/token/',
-        userData
+         `${API_URL}/token/`,
+         userData
    );  
 };

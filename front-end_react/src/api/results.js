@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { API_URL } from './config';
 
 
 export const getResults =  async () =>{
-     return await axios.get('http://127.0.0.1:8000/api/v1/results/')
+     return await axios.get(`${API_URL}/results/`)
     
 }

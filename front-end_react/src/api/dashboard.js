@@ -1,7 +1,8 @@
 import axios from 'axios'
+import { API_URL } from './config';
 
 const dashboardApi = axios.create({
-    baseURL: 'http://127.0.0.1:8000/api/v1/dashboard-stats/'
+    baseURL: `${API_URL}/dashboard-stats/`
 })
 
 export const getDasboardStats = ()=>{
