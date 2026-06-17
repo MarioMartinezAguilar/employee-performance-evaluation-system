@@ -1,0 +1,386 @@
+[
+{
+    "model": "encuesta.question",
+    "pk": 1,
+    "fields": {
+        "question_text": "¿Cuál es el área en la que te encuentras laborando actualmente?",
+        "order": 1
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 2,
+    "fields": {
+        "question_text": "¿Cuánto tiempo lleva desempeñándose en dicha área?",
+        "order": 2
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 3,
+    "fields": {
+        "question_text": "¿Cómo atiende a la ciudadanía en trámites o solicitudes según su área?",
+        "order": 3
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 4,
+    "fields": {
+        "question_text": "¿Cómo desempeña sus tareas asignadas?",
+        "order": 4
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 5,
+    "fields": {
+        "question_text": "¿Qué nivel de conocimiento tiene sobre normas y procedimientos municipales?",
+        "order": 5
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 6,
+    "fields": {
+        "question_text": "¿Cómo gestiona los documentos y expedientes de su área?",
+        "order": 6
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 7,
+    "fields": {
+        "question_text": "¿Cómo utiliza materiales, equipos o recursos públicos de su área?",
+        "order": 7
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 8,
+    "fields": {
+        "question_text": "¿Cómo colabora con sus compañeros y otras áreas?",
+        "order": 8
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 9,
+    "fields": {
+        "question_text": "¿Cuenta con los recursos materiales necesarios para desempeñar su área?",
+        "order": 9
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 10,
+    "fields": {
+        "question_text": "¿Las herramientas o el equipo que utiliza están en buen estado?",
+        "order": 10
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 11,
+    "fields": {
+        "question_text": "¿Recibe apoyo de su área o superiores para realizar sus funciones?",
+        "order": 11
+    }
+},
+{
+    "model": "encuesta.question",
+    "pk": 12,
+    "fields": {
+        "question_text": "¿El ambiente laboral en su área es adecuado?",
+        "order": 12
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 1,
+    "fields": {
+        "question": 1,
+        "text": "Seguridad Vial"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 2,
+    "fields": {
+        "question": 1,
+        "text": "Oficialía Mayor"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 3,
+    "fields": {
+        "question": 1,
+        "text": "Desarrollo Económico"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 4,
+    "fields": {
+        "question": 2,
+        "text": "De 1 a 3 años"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 5,
+    "fields": {
+        "question": 2,
+        "text": "De 4 a 7 años"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 6,
+    "fields": {
+        "question": 2,
+        "text": "Más de 7 años"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 7,
+    "fields": {
+        "question": 3,
+        "text": "Brinda atención clara, respetuosa y resuelve de manera eficiente"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 8,
+    "fields": {
+        "question": 3,
+        "text": "Atiende correctamente, aunque con áreas de mejora"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 9,
+    "fields": {
+        "question": 3,
+        "text": "Presenta deficiencias en el trato o en la solución de solicitudes"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 10,
+    "fields": {
+        "question": 4,
+        "text": "Cumple en tiempo y forma, con alta calidad"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 11,
+    "fields": {
+        "question": 4,
+        "text": "Cumple con la mayoría de sus tareas"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 12,
+    "fields": {
+        "question": 4,
+        "text": "Presenta retrasos o errores frecuentes"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 13,
+    "fields": {
+        "question": 5,
+        "text": "Conoce y aplica correctamente reglamentos y procesos"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 14,
+    "fields": {
+        "question": 5,
+        "text": "Tiene conocimiento básico, con algunas dudas"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 15,
+    "fields": {
+        "question": 5,
+        "text": "Desconoce procesos claves o comete errores frecuentes"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 16,
+    "fields": {
+        "question": 6,
+        "text": "Ordenado, preciso y cumple con alineamientos"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 17,
+    "fields": {
+        "question": 6,
+        "text": "Generalmente ordenado, con algunos errores"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 18,
+    "fields": {
+        "question": 6,
+        "text": "Desorganizado o incumple lineamientos"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 19,
+    "fields": {
+        "question": 7,
+        "text": "Responsable, eficiente y cuidadoso"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 20,
+    "fields": {
+        "question": 7,
+        "text": "Uso adecuado con área de mejora"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 21,
+    "fields": {
+        "question": 7,
+        "text": "Uso inadecuado o descuidado"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 22,
+    "fields": {
+        "question": 8,
+        "text": "Colabora activamente y apoya a otros"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 23,
+    "fields": {
+        "question": 8,
+        "text": "Colabora cuando se le solicita"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 24,
+    "fields": {
+        "question": 8,
+        "text": "Muestra poca disposición a colaborar"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 25,
+    "fields": {
+        "question": 9,
+        "text": "Siempre se cuenta con lo necesario"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 26,
+    "fields": {
+        "question": 9,
+        "text": "Generalmente cuento con lo necesario"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 27,
+    "fields": {
+        "question": 9,
+        "text": "Frecuentemente carece de recursos"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 28,
+    "fields": {
+        "question": 10,
+        "text": "Siempre están en óptimas condiciones"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 29,
+    "fields": {
+        "question": 10,
+        "text": "Funcionan con algunas fallas menores"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 30,
+    "fields": {
+        "question": 10,
+        "text": "Presentan fallas frecuentes"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 31,
+    "fields": {
+        "question": 11,
+        "text": "Siempre recibe apoyo oportuno"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 32,
+    "fields": {
+        "question": 11,
+        "text": "Recibe apoyo en la mayoría de los casos"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 33,
+    "fields": {
+        "question": 11,
+        "text": "Rara vez recibe apoyo"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 34,
+    "fields": {
+        "question": 12,
+        "text": "Es positivo y colaborativo"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 35,
+    "fields": {
+        "question": 12,
+        "text": "Es aceptable"
+    }
+},
+{
+    "model": "encuesta.choice",
+    "pk": 36,
+    "fields": {
+        "question": 12,
+        "text": "Es conflictivo o poco favorable"
+    }
+}
+]
