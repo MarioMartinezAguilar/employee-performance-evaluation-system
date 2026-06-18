@@ -75,9 +75,10 @@ export function Dashboard() {
         )
 
     }
+    const isMobile = window.innerWidth < 768;
 
     return (
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row overflow-x-hidden">
             <SideBar />
             <div className="flex-1 p-6 min-h-screen ">
                 <div className=" bg-gray-200 p-6">  {/* min-h-screen es altura completa */}
@@ -134,7 +135,13 @@ export function Dashboard() {
                                             <YAxis
                                                 type="category"
                                                 dataKey="name"
-                                                width={170}
+                                                width={isMobile ? 100 : 180}
+                                                tickFormatter={(value) =>
+                                                    isMobile && value.length > 10
+                                                    ? value.substring(0, 10) + "..."
+                                                    : value
+                                                }
+                                                
 
                                             />
                                             <Tooltip />

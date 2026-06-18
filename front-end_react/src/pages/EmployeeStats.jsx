@@ -50,13 +50,14 @@ export function EmployeeStats(){
 
     }
     return (
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row ">
             <SideBar/>
             <div className="flex-1 p-6 min-w-0">
                 <h1 className="text-3xl font-bold m-6 text-center">Estadísticas De Empleados</h1>
                 <div className='bg-white rounded-2xl shadow-md p-6'>
-                    <div className="w-full h-[400px]">
-                        <ResponsiveContainer>
+                    <div className="w-full h-[400px]  min-w-0">
+                        
+                        <ResponsiveContainer  width="100%" height="100%">
                             <PieChart>
                                 <Pie
                                     data={genderData}

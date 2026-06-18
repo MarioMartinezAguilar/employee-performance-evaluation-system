@@ -4,6 +4,7 @@ import { getDasboardStats } from "../api/dashboard";
 import {getEmployeeGenderStats} from "../api/employee";
 import jsPDF from 'jspdf';
 import  logo  from '../assets/logo.png';
+import { API_URL } from '../api/config';
 
 
 
@@ -102,12 +103,12 @@ export function Reports(){
         )
         doc.setFont('helvetica', 'normal')
         doc.text(
-            `Masculino: ${genderStats.Masculino}`,
+            `Masculino: ${genderStats?.Masculino ?? 0}`,
             30,
             105
         )
         doc.text(
-            `Femenino: ${genderStats.Femenino}`,
+            `Femenino: ${genderStats?.Femenino ?? 0}`,
             30,
             115
         )
@@ -127,7 +128,7 @@ export function Reports(){
     //function para guardar el Excel
     const downloadExcel = () => {
         window.open(
-            'http://127.0.0.1:8000/api/v1/export-employees/','_blank'
+            `${API_URL}/export-employees/`,'_blank'
         )
     }
 
