@@ -6,7 +6,7 @@ import { ProtectedRoute } from './components/ProtectedRoute';
 import { Toaster } from 'react-hot-toast';
 import { Dashboard } from './pages/Dashboard';
 import { EmployeeStats } from './pages/EmployeeStats';
-import { Reports } from './pages/reports';
+import { Reports } from './pages/Reports';
 import { Login } from './pages/Login';
 import { ProtectedAdminRoute } from './components/ProtectedAdminRoute';
 import {PublicRoute} from './components/PublicRoute';
