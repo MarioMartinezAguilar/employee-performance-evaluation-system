@@ -49,6 +49,8 @@ export function EmployeeStats(){
         )
 
     }
+    /* variable responsive */
+    const isMobile = window.innerWidth < 768;
     return (
         <div className="flex flex-col md:flex-row ">
             <SideBar/>
@@ -65,11 +67,14 @@ export function EmployeeStats(){
                                     nameKey="name"
                                     cx= "50%"
                                     cy= "50%"
-                                    outerRadius={120}
-                                    labelLine={false}
-                                    label={({name, percent})=>
-                                        `${name} ${(percent * 100).toFixed(0)}%`
+                                    outerRadius={isMobile ? 80 : 120}
+                                    label={
+                                        !isMobile
+                                        ?({name, percent})=>
+                                            `${name} ${(percent * 100).toFixed(0)}%`
+                                        : false
                                     }
+                                    labelLine={false}
                                     
                                 >
                                     {genderData.map(
