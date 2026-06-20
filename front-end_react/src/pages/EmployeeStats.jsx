@@ -92,7 +92,19 @@ export function EmployeeStats(){
 
                                 </Pie>
                                 <Tooltip/>
-                                <Legend/>
+                                <Legend
+                                    formatter={(value, entry) => {
+                                        const total = genderData.reduce(
+                                            (acc, item) => acc + item.value,
+                                                0
+                                        );
+                                        const percent = (
+                                            (entry.payload.value / total) *
+                                                100
+                                        ).toFixed(0);
+                                        return `${value} (${percent}%)`;
+                                    }}
+                                />
                             </PieChart>
                         </ResponsiveContainer>
 
