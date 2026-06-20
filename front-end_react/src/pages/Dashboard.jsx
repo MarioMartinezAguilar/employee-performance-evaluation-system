@@ -144,7 +144,23 @@ export function Dashboard() {
                                                 
 
                                             />
-                                            <Tooltip />
+                                            <Tooltip
+                                                content={({ active, payload }) => {
+                                                    if (active && payload && payload.length) {
+                                                        return (
+                                                            <div className="bg-white p-3 border rounded shadow max-w-xs">
+                                                                <p className="break-words">
+                                                                    {payload[0].payload.name}
+                                                                </p>
+                                                                <p>
+                                                                    Total: {payload[0].value}
+                                                                </p>
+                                                            </div>
+                                                        );
+                                                    }
+                                                    return null;
+                                                }}
+                                             />
                                             <Bar dataKey="value">
                                                 {chart.data.map((entry, index) => (
                                                     <Cell
