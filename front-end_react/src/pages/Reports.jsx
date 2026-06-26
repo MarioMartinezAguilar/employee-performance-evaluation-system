@@ -4,7 +4,8 @@ import { getDasboardStats } from "../api/dashboard";
 import {getEmployeeGenderStats} from "../api/employee";
 import jsPDF from 'jspdf';
 import  logo  from '../assets/logo.png';
-import { API_URL } from '../api/config';
+//import { API_URL } from '../api/config';
+import { downloadEmployeesExcel } from "../api/reports";
 
 
 
@@ -126,11 +127,36 @@ export function Reports(){
         doc.save('reporte-encuesta.pdf');
     }
     //function para guardar el Excel
-    const downloadExcel = () => {
+    const downloadExcel = async() => {
+        try{
+            const response = await downloadEmployeesExcel(); //hace la petición al backend y recibe empleados.xlsx
+            const blob = new Blob([response.data]); // convierte la respuesta en un archivo binario manejable en el navegador
+
+            //crear una URL Temporal
+            const url = window.URL.createObjectURL(blob); //-> blob:http://localhost...
+            //crear un enlace invisible
+            const link = document.createElement('a');
+            //apuntar el enlace invisible al archivo de Excel
+            link.href = url;
+            //no abrir el archivo si no Descárgalo y ponle un nombre
+            link.download = 'empleados.xlsx';
+            //simular que el usuario dio un  click para empezar la descarga
+            link.click();
+            // por ultimo limpiar la memoria temporal
+            window.URL.revokeObjectURL(url);
+        }catch(error){
+            console.log(error);
+
+        }
+
+    }
+
+
+    /* const downloadExcel = () => {
         window.open(
             `${API_URL}/export-employees/`,'_blank'
         )
-    }
+    } */
 
 
     return(

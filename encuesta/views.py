@@ -1,14 +1,35 @@
-from rest_framework import viewsets,status
+from rest_framework import viewsets,status,mixins
+from rest_framework.response import Response
+from rest_framework.decorators import (
+    api_view,
+    authentication_classes,
+    permission_classes
+)
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_simplejwt.authentication import JWTAuthentication
 from .serializer import EmployeesSerializer ,QuestionSerializer, AnswerSerializer
 from .models import Employees , Question , Answer
-from rest_framework.response import Response
-from .utils import get_results_data, get_employees_gender_stats, create_chart, generate_all_charts, create_pdf_reports,generate_employees_excel
+from .utils import (
+    get_results_data, 
+    get_employees_gender_stats,
+    create_chart, 
+    generate_all_charts, 
+    create_pdf_reports,
+    generate_employees_excel
+)
 from django.http import JsonResponse, FileResponse, HttpResponse
 
 
 
 # Create your views here.
-class EmployeesView(viewsets.ModelViewSet):
+""" class EmployeesView(viewsets.ModelViewSet):
+    serializer_class = EmployeesSerializer
+    queryset = Employees.objects.all() """
+    
+class EmployeesView(
+    mixins.CreateModelMixin,
+    viewsets.GenericViewSet
+):
     serializer_class = EmployeesSerializer
     queryset = Employees.objects.all()
 
@@ -19,7 +40,7 @@ class QuestionView(viewsets.ReadOnlyModelViewSet):
     queryset = Question.objects.all().order_by('order')
     serializer_class = QuestionSerializer
     
-class AnswerView(viewsets.ModelViewSet):
+class AnswerView(mixins.CreateModelMixin,viewsets.GenericViewSet):
     queryset = Answer.objects.all()
     serializer_class = AnswerSerializer
 
@@ -33,6 +54,9 @@ class AnswerView(viewsets.ModelViewSet):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 #vista para reportes
+@api_view(["GET"])
+@authentication_classes([JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def results_view(request):
     data = get_results_data()
     return JsonResponse(data)
@@ -50,6 +74,9 @@ def results_view(request):
 """   
 
 # vista para generar el reporte de todas las gráficas cuando entre a la ruta
+@api_view(["GET"])
+@authentication_classes([JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def generate_report(request):
     files = generate_all_charts()
     return JsonResponse({
@@ -67,6 +94,9 @@ def generate_report(request):
     }) """
     
 # function para crear la vista para generar la descarga del pdf
+@api_view(["GET"])
+@authentication_classes([JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def pdf_report(request):
     pdf_file = create_pdf_reports()
     return FileResponse(
@@ -78,6 +108,9 @@ def pdf_report(request):
     
 # vista para contar los empleados las preguntas y respuestas
 # (resumen rápido del dashboard)
+@api_view(["GET"])
+@authentication_classes([JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def dashboard_stats(request):
     employees_count = Employees.objects.count() # contamos los registro de empleados, preguntas y respuestas
     questions_count = Question.objects.count()
@@ -90,12 +123,18 @@ def dashboard_stats(request):
     })
     
 # vista para el sexo de los empleados
+@api_view(["GET"])
+@authentication_classes([JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def employee_gender(request):
     data = get_employees_gender_stats()
     return JsonResponse(data)
 
 
 #vista para exportar el pdf
+@api_view(["GET"])
+@authentication_classes([JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def export_employees_excel(request):
     # vamos a ejecutar la function para generar el excel
     wb = generate_employees_excel()

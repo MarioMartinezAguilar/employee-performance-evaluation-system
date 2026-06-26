@@ -1,4 +1,4 @@
-import axios from 'axios';
+/* import axios from 'axios';
 import { API_URL } from './config';
 
 const employeeStatsApi = axios.create({
@@ -7,4 +7,10 @@ const employeeStatsApi = axios.create({
 
 export const getEmployeeGenderStats = () => {
     return employeeStatsApi.get('/')
-}
+} */
+
+import axiosInstance from './axiosInstance';
+
+export const getEmployeeGenderStats = () => {
+    return axiosInstance.get('/employee-gender/');
+};
