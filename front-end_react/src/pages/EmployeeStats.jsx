@@ -49,14 +49,17 @@ export function EmployeeStats(){
         )
 
     }
+    /* variable responsive */
+    const isMobile = window.innerWidth < 768;
     return (
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row ">
             <SideBar/>
             <div className="flex-1 p-6 min-w-0">
                 <h1 className="text-3xl font-bold m-6 text-center">Estadísticas De Empleados</h1>
                 <div className='bg-white rounded-2xl shadow-md p-6'>
-                    <div className="w-full h-[400px]">
-                        <ResponsiveContainer>
+                    <div className="w-full h-[400px]  min-w-0">
+                        
+                        <ResponsiveContainer  width="100%" height="100%">
                             <PieChart>
                                 <Pie
                                     data={genderData}
@@ -64,11 +67,14 @@ export function EmployeeStats(){
                                     nameKey="name"
                                     cx= "50%"
                                     cy= "50%"
-                                    outerRadius={120}
-                                    labelLine={false}
-                                    label={({name, percent})=>
-                                        `${name} ${(percent * 100).toFixed(0)}%`
+                                    outerRadius={isMobile ? 80 : 120}
+                                    label={
+                                        !isMobile
+                                        ?({name, percent})=>
+                                            `${name} ${(percent * 100).toFixed(0)}%`
+                                        : false
                                     }
+                                    labelLine={false}
                                     
                                 >
                                     {genderData.map(
@@ -86,7 +92,19 @@ export function EmployeeStats(){
 
                                 </Pie>
                                 <Tooltip/>
-                                <Legend/>
+                                <Legend
+                                    formatter={(value, entry) => {
+                                        const total = genderData.reduce(
+                                            (acc, item) => acc + item.value,
+                                                0
+                                        );
+                                        const percent = (
+                                            (entry.payload.value / total) *
+                                                100
+                                        ).toFixed(0);
+                                        return `${value} (${percent}%)`;
+                                    }}
+                                />
                             </PieChart>
                         </ResponsiveContainer>
 

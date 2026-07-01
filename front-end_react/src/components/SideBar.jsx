@@ -15,7 +15,7 @@ export function SideBar(){
                 color: '#e4dfdf'
             }
         });
-        navigate('/login');
+        navigate('/login', {replace: true});
     }
     return(
         <div className="w-full md:w-64 min-h-screen bg-slate-900 text-white p-6">

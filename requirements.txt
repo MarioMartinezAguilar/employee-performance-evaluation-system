@@ -12,6 +12,7 @@ djangorestframework_simplejwt==5.5.1
 drf-spectacular==0.29.0
 et_xmlfile==2.0.0
 fonttools==4.62.1
+gunicorn==26.0.0
 idna==3.13
 inflection==0.5.1
 itypes==1.2.0
@@ -25,6 +26,8 @@ numpy==2.4.4
 openpyxl==3.1.5
 packaging==26.2
 pillow==12.2.0
+psycopg==3.3.4
+psycopg-binary==3.3.4
 PyJWT==2.13.0
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
@@ -38,3 +41,4 @@ sqlparse==0.5.5
 tzdata==2026.1
 uritemplate==4.2.0
 urllib3==2.6.3
+whitenoise==6.12.0

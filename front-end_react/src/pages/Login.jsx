@@ -60,7 +60,8 @@ export function Login(){
                             className="block text-gray-700 mb-2 text-2xl  font-bold" 
                             htmlFor="usuario">Usuario:
                         </label>
-                        <input 
+                        <input
+                            id="usuario" 
                             type="text"
                             className="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
                             placeholder="Ingresa Tu Usuario"
@@ -76,9 +77,9 @@ export function Login(){
                         <div>
                             <label
                                 className="block text-gray-700 mb-2 text-2xl  font-bold" 
-                                htmlFor="usuario">Contraseña:
+                                htmlFor="password">Contraseña:
                             </label>
-                            <input type="password"
+                            <input type="password" id="password"
                                 className="w-full border rounded-lg p-3  focus:outline-none focus:ring-2 focus:ring-blue-600"
                                 placeholder="Ingresa Tu Contraseña"
                                 {...register('password', {

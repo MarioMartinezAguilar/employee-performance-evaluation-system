@@ -21,7 +21,7 @@ urlpatterns = [
     path('export-employees/', views.export_employees_excel, name='export-employees'),
     # rutas para tokens
     path('token/', TokenObtainPairView.as_view(),name='token_obtain_pair'), 
-    path('token/refresh', TokenRefreshView.as_view(),name='token_refresh'), 
+    path('token/refresh/', TokenRefreshView.as_view(),name='token_refresh'), 
 ]
 
 

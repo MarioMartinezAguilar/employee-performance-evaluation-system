@@ -79,7 +79,7 @@ export function RegisterForm(){
                             </div>
                     )}
                         <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">Nombre Del Empleado: </label>
-                            <input type="text" placeholder="Ingresa tu nombre"
+                            <input id ="nombre"type="text" placeholder="Ingresa tu nombre"
                                 {...register('name', {required: true})}
                                 className='w-full border border-gray-300 rounded-lg 
                                 p-1.5 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition
@@ -87,7 +87,7 @@ export function RegisterForm(){
                             />
                             
                         <label htmlFor="puesto" className="block text-sm font-medium text-gray-700 mb-1">Puesto Del Empleado: </label> 
-                            <input type="text"placeholder="Ingresa el puesto de trabajo"
+                            <input id="puesto" type="text"placeholder="Ingresa el puesto de trabajo"
                                 {...register('job_position', {required: true})}
                                 className='w-full border border-gray-300 rounded-lg 
                                 p-1.5 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition
@@ -95,7 +95,7 @@ export function RegisterForm(){
                             />
                             
                         <label htmlFor="nomina" className="block text-sm font-medium text-gray-700 mb-1">Número De Tu Nómina:</label>
-                            <input type="text" placeholder="Ingresa el número de tu nómina" 
+                            <input id="nomina" type="text" placeholder="Ingresa el número de tu nómina" 
                                 {...register('payroll_number', {required: true})}
                                 className='w-full border border-gray-300 rounded-lg 
                                 p-1.5 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition
@@ -105,7 +105,7 @@ export function RegisterForm(){
                             
                         <label htmlFor="sexo" className="block text-sm font-medium text-gray-700 mb-1">Selecciona Tu Sexo:</label>
                         <div className="relative mb-4">
-                            <select {...register('gender', {required: true})}
+                            <select id="sexo" {...register('gender', {required: true})}
                             defaultValue=""
                             className={`w-full border border-gray-300 rounded-lg p-1.5 bg-white appearance-none mb-2 focus:outline-none  
                             focus:ring-2 focus:ring-blue-500 transition 
@@ -117,7 +117,7 @@ export function RegisterForm(){
                             <span className='absolute right-3 top-2 text-gray-600 pointer-events-none'>▼</span>
                         </div>                            
                         <label htmlFor="sindicato" className="block text-sm font-medium text-gray-700 mb-1">Sección Del Sindicato:</label>
-                            <input type="text" placeholder="Ingresa Tu Sección De Sindicato" 
+                            <input id="sindicato" type="text" placeholder="Ingresa Tu Sección De Sindicato" 
                                 {...register('union_number', {required: true})}
                                 className='w-full border border-gray-300 rounded-lg 
                                 p-1.5 mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition
