@@ -1,6 +1,6 @@
 #  Sistema Web para la Evaluación del Desempeño Laboral
 
-Sistema full stack desarrollado con React, Django REST Framework y SQLite para la gestión y análisis de evaluaciones de desempeño laboral, incorporando autenticación JWT, dashboard administrativo, reportes PDF y exportación de datos a Excel.
+Sistema full stack desarrollado con React, Django REST Framework y SQLite así como PostgreSQL en el entorno de producción. Para la gestión y análisis de evaluaciones de desempeño laboral, incorporando autenticación JWT, dashboard administrativo, reportes PDF y exportación de datos a Excel.
 
 ## Descripción Del Proyecto
 
@@ -49,6 +49,7 @@ Este proyecto fue desarrollado utilizando una arquitectura cliente-servidor, emp
 
 ### Base de datos y Lenguajes de programación
 - SQLite
+- PostgreSQL (Producción)
 - JavaScript
 - Python
 
@@ -57,6 +58,7 @@ Este proyecto fue desarrollado utilizando una arquitectura cliente-servidor, emp
 - ReportLab (Generación de PDF)
 - jsPDF (Generación de documentos PDF)
 - Matplotlib (Generación de gráficas)
+- DBeaver (Pruebas en producción)
 - Git
 - GitHub
 
@@ -86,8 +88,9 @@ El sistema fue desarrollado siguiendo una arquitectura cliente-servidor, donde e
             │
             ▼
     ┌─────────────────┐
-    │     SQLite      │
-    │   Base de Datos │
+    │     SQLite      |
+    |   PostgreSQL    │
+    │  Base de Datos  │
     └─────────────────┘
 ```
 ## Proyecto Web Funcionando
@@ -203,6 +206,16 @@ El sistema fue desarrollado siguiendo una arquitectura cliente-servidor, donde e
 **Por otro lado se muestra en la base de datos como esta estructurada las opciones de respuesta de cada pregunta de la evaluación**
 
 ![sqlite](capturas/opciones.png)
+
+**También utilizamos en entorno de producción empleando una base de datos PostgreSQL donde se almacenan los datos en otras palabras dejamos para desarrollo SQLite y para producción y despliegue PostgreSQL, a continuación podemos ver nuestro diagrama entidad relación obtenido con la conexión a PostgreSQL usando la herramienta DBeaver para visualizar nuestra base de datos creada en producción**
+
+![entidad](capturas/PostgreSQL-employee_performance_db.png)
+
+**También el manejo del backend en producción se realiza mediante el ADMIN de Django estableciendo un usuario administrador como se puede apreciar en nuestro administrador de Django ya en producción**
+
+![admin-django](capturas/admin.png)
+
+![admin-django](capturas/admin2.png)
 
 ### Documentación de la API (Swagger)
 La API REST se encuentra documentada mediante Swagger/OpenAPI utilizando **drf-spectacular**, permitiendo visualizar y probar los endpoints principales del sistema de forma interactiva.
@@ -336,13 +349,10 @@ Una vez iniciados el servidor de Django y el servidor de desarrollo de React, la
     └── db.sqlite3               # Base de datos SQLite (desarrollo)
 ```
 ## Funcionalidades futuras
-* Implementar Refresh Tokens para mejorar la gestión de sesiones.
 * Incorporar recuperación de contraseña.
 * Agregar roles y permisos para diferentes tipos de usuarios.
 * Implementar filtros avanzados en los reportes.
 * Incorporar más métricas y visualizaciones estadísticas.
-* Migrar la base de datos a PostgreSQL para entornos de producción.
-* Implementar despliegue en la nube.
 * Añadir pruebas automatizadas para frontend y backend.
 
 # Autor
