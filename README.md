@@ -12,6 +12,24 @@ El sistema incorpora funcionalidades para la generación de reportes en formato 
 
 Este proyecto fue desarrollado utilizando una arquitectura cliente-servidor, empleando React para el frontend y Django REST Framework para el backend, con el objetivo de ofrecer una solución moderna, segura y fácil de utilizar para la gestión de evaluaciones de desempeño laboral.
 
+🚀 Live Demo
+
+🌐 Frontend:
+https://employee-performance-evaluation-sys-black.vercel.app/
+https://employee-performance-evaluation-sys-black.vercel.app/login
+
+⚙️ Backend API:
+https://employee-performance-evaluation-system.onrender.com/api/v1/
+
+## 📡 Main API Endpoints
+
+- GET `/api/v1/questions/`
+- POST `/api/v1/employees/`
+- POST `/api/v1/answer/`
+- POST `/api/token/`
+- POST `/api/token/refresh/`
+
+
 ## Características Del Proyecto
 
 - Registro y gestión de empleados.
@@ -46,6 +64,7 @@ Este proyecto fue desarrollado utilizando una arquitectura cliente-servidor, emp
 - Simple JWT
 - Django-cors-headers
 - Drf-spectacular
+- Supabase
 
 ### Base de datos y Lenguajes de programación
 - SQLite
@@ -216,6 +235,21 @@ El sistema fue desarrollado siguiendo una arquitectura cliente-servidor, donde e
 ![admin-django](capturas/admin.png)
 
 ![admin-django](capturas/admin2.png)
+
+**Base de datos PostgreSQL en Supabase implementada para producción donde se encuentra almacenada la información de toda nuestra aplicación**
+
+*Empleados*
+![Supabase](capturas/supabase1.png)
+
+**Base de datos en Supabase(Postgresql)**
+
+*Estructura de opciones de respuesta de la encuesta de nuestra aplicación*
+![Supabase](capturas/supabase2.png)
+
+**Tablas generadas en Supabase migración de datos desde SQLite a Supabase(PostgreSQL)**
+
+![Supabase](capturas/supabase3.png)
+
 
 ### Documentación de la API (Swagger)
 La API REST se encuentra documentada mediante Swagger/OpenAPI utilizando **drf-spectacular**, permitiendo visualizar y probar los endpoints principales del sistema de forma interactiva.

@@ -51,3 +51,5 @@ front-end_react/dist-ssr/
 *.njsproj
 *.sln
 *.sw?
+# Fixtures temporales
+encuesta_fixture.json
